@@ -3,21 +3,24 @@
 <script>
   
   function pulaLinha() {
-    document.write("</br>");
-    document.write("</br>");
+    document.write("<br>");
+    document.write("<br>");
   };
 
-  function mostra(n) {
-    document.write(n);
+  function mostra(frase) {
+    document.write(frase);
     pulaLinha();
   };
 
   function calculaIMC(peso, altura) {
     var IMC = peso / (altura * altura);
-    mostra("O imc é: " + Math.round(IMC))
+    return IMC;
   };
 
-  calculaIMC(73, 1.71);
-  calculaIMC(68, 1.72);
+  var imcFlavio = calculaIMC(73, 1.71);
+  var imcAmigo = calculaIMC(68, 1.72);
+
+  mostra(imcFlavio);
+  mostra(imcAmigo);
 
 </script>

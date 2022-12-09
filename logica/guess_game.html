@@ -17,18 +17,32 @@
   }
 
   var numeroPensado = sorteia(10);
+  console.log(numeroPensado)
+
+  var chances = 1;
+
+  while(chances <= 3) {
   var chute = parseInt(prompt("Digite seu chute."));
-  console.log(numeroPensado);
 
   if (chute == numeroPensado) {
     document.write("Você acertou!");
+    pulaLinha();
+    break;
+
   } else if (chute > numeroPensado) {
     document.write("Você errou!")
     pulaLinha();
     document.write("O número era menor que: " + chute);
+    pulaLinha();
+
   } else {
     document.write("Você errou!")
     pulaLinha();
     document.write("O número era maior que: " + chute);
+    pulaLinha();
   }
+  chances++;
+};
+
+mostra("Fim!")
 </script>

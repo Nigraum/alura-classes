@@ -5,3 +5,15 @@ p {
 h1 {
   text-align: center;
 }
+
+body {
+  background: #CCCCCC;
+}
+
+p em strong {
+  color: red;
+}
+
+#missao {
+  font-size: 20px;
+}
